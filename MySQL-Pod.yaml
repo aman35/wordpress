@@ -1,16 +1,18 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mysql
+  name: db
   labels:
-    name: mysql
+    name: db
     app: wordpress-app
 spec:
   containers:
-    - name: mysql
+    - name: db
       image: mysql
       env:
+        - name: MYSQL_DATABASE
+          value: wordpress
         - name: MYSQL_ROOT_PASSWORD
           value: password
       ports:
-        - containerPort: 3309
+        - containerPort: 3306

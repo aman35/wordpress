@@ -11,8 +11,10 @@ spec:
       image: wordpress
       env:
         - name: WORDPRESS_DB_HOST
-          value: mysql
+          value: db
+        - name: WORDPRESS_DB_NAME
+          value: wordpress
         - name: WORDPRESS_DB_USER
           value: root
-        - name: WORDPRESS_DB_PASSWORD
-          value: password
+        - Name: WORDPRESS_DB_PASSWORD
+          value: wordpress

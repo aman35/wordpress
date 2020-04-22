@@ -11,5 +11,5 @@ spec:
     name: mysql
     app: wordpress-app
   ports:
-   - targetPort: 3309
-     port: 3309
+   - targetPort: 3306
+     port: 3306
